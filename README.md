@@ -1,3 +1,55 @@
-# 🤖 Q&A Chatbot with LangChain & OpenAI *An intelligent virtual assistant powered by RAG for the "Introduction to Tableau" course.*    
---- ## 📖 Case Description **LangChain** is an advanced framework for developing applications powered by language models. A prominent use case is the creation of customer support or Q&A chatbots. In this project, you will discover how to build an intelligent chatbot using Python and LangChain for the *Introduction to Tableau* course by Ned Krastev. To achieve this, you will employ **Retrieval Augmented Generation (RAG)**—a highly popular technique for building AI-powered chatbots. To implement the core pipeline, we will utilize the **LangChain Expression Language (LCEL)** protocol. This allows seamless connection of Runnable LangChain components, ensuring the output of one serves perfectly as the input to the next. --- ## ⚙️ 3-Stage RAG Architecture This LangChain tutorial encompasses three fundamental stages to build the chatbot: 1. **Indexing:** We start by dividing the *Introduction to Tableau* course transcript into shorter, manageable sections using LangChain's Markdown header and token splitters. These sections are then converted into numerical vectors through an embedding model and stored securely in a **Chroma** vector store. 2. **Retrieval:** In the second stage, a retriever searches the vector database to extract the portion of the course that is most valuable and relevant for addressing a specific student's question. 3. **Augmented Generation:** Finally, the student's question is inputted into a prompt template alongside the retrieved text. This complete prompt is fed to a chat model to generate an "augmented" response. An output parser is used at the end of the chain to ensure the result is returned to the student as a clean, formatted string. --- ## 🎯 Core Competencies Tested This project is designed to test and elevate your engineering skills in: * Utilizing LangChain's **text splitters** for efficient document processing. * Managing chat messages and designing effective **chat prompt templates**. * Applying LLMs and constructing **LCEL chains** for course transcription correction. * Generating **embeddings** and managing storage within a vector store. * Constructing **RunnableLambdas** from regular Python functions and lambda functions. * Creating comprehensive LCEL chains to power a functional Q&A chatbot. --- ## 🛠️ Project Requirements & Setup ### Environment You are advised to create and work in a new, dedicated virtual environment for this exercise. Ensure you have **Python >= 3.9 and < 4.0** installed, alongside a running instance of **Jupyter Notebook**. > **⚠️ Important Note:** This project necessitates using OpenAI's embedding and language models. A valid **OpenAI API key** is required. Accordingly, please monitor your token consumption and the associated charges. ### Required Installations Execute the following command to install the specific package versions required for this project: ```bash pip install langchain==0.3.3 langchain-chroma==0.1.4 langchain-community==0.3.2 langchain-openai==0.2.2 pypdf==5.0.1 python-dotenv==1.0.1 ``` *(Note: `pip install langchain==0.3.3` will automatically install `langchain-core` and `langchain-text-splitters`, both of which are required for the project).* *Tip: You can execute the chatbot project with different package versions, but be mindful of package incompatibilities and syntax differences. Since LangChain undergoes continuous updates, you might encounter minor syntax variations. Always consult the LangChain API Reference for current classes and methods.* --- ## 📂 Project Files * 📄 `Introduction_to_Tableau.pdf`: This file contains the complete transcript of the Introduction to Tableau course. * 📓 `LangChain_Project.ipynb`: The Jupyter Notebook containing the skeleton code to guide you step-by-step through building the chatbot. ---
-So, ready to learn how to build a chatbot using LangChain and OpenAI? Let's begin this exciting project! 🚀
+🤖 Create a Q&A Chatbot with LangChain
+An elegant and intelligent virtual assistant powered by RAG for the "Introduction to Tableau" course.
+
+📖 Case Description
+LangChain is an advanced framework for developing language model-powered applications. A famous use case is creating customer support or Q&A chatbots. In this project, you will discover how to create a chatbot using Python and LangChain to answer questions about the Introduction to Tableau course by Ned Krastev.
+
+To achieve this goal, we employ Retrieval Augmented Generation (RAG)—a highly popular technique for building AI-powered chatbots. To seamlessly implement the pipeline representing the Q&A chatbot, we utilize the LangChain Expression Language (LCEL) protocol. This allows us to connect Runnable components so the output of one serves directly as the input to the next.
+
+⚙️ The 3-Stage RAG Architecture
+This LangChain tutorial encompasses three core stages to ensure accurate and contextual answers:
+
+Indexing: We divide the course transcript into shorter sections using LangChain's Markdown header and token splitters. These sections are converted into numerical vectors through an embedding model and stored in a Chroma vector store.
+
+Retrieval: A retriever extracts the specific portion of the course that is most valuable for addressing a student's inputted question.
+
+Augmented Generation: The chat model uses the retrieved text and the student's question—combined via a prompt template—to generate an "augmented" response. Finally, an output parser ensures the result is returned as a clean string.
+
+🎯 Skills You Will Master
+This project is designed to challenge and expand your AI engineering capabilities:
+
+Utilizing LangChain's text splitters for document parsing.
+
+Managing chat messages and constructing prompt templates.
+
+Applying LLMs and building LCEL chains for course transcription correction.
+
+Generating embeddings for storage in a vector database.
+
+Constructing RunnableLambdas from regular Python and lambda functions.
+
+Creating end-to-end LCEL chains for a fully functional Q&A chatbot.
+
+🛠️ Project Requirements & Setup
+Prerequisites
+Python Environment: Version >= 3.9 and < 4.0. (Creating a dedicated virtual environment is highly recommended).
+
+IDE: Jupyter Notebook installed and running.
+
+API Access: A valid OpenAI API key.
+
+⚠️ Important Notice: This project uses OpenAI's embedding and language models. Please monitor your token consumption and associated charges closely.
+
+Installation
+Execute the following command to install the required dependencies:
+
+Bash
+pip install langchain==0.3.3 langchain-chroma==0.1.4 langchain-community==0.3.2 langchain-openai==0.2.2 pypdf==5.0.1 python-dotenv==1.0.1
+Note: Installing langchain==0.3.3 automatically installs langchain-core and langchain-text-splitters, which are required for the project.
+
+Package Compatibility: You can execute the project with different package versions, but be mindful of incompatibilities. LangChain updates frequently; if you encounter syntax differences, consult the LangChain API Reference.
+
+📂 Project Files
+Introduction_to_Tableau.pdf: Contains the complete transcript of the Introduction to Tableau course.
+
+LangChain_Project.ipynb: A Jupyter Notebook including the skeleton code to build your chatbot step by step.
