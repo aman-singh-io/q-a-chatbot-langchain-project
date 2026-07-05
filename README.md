@@ -37,19 +37,3 @@ Python Environment: Version >= 3.9 and < 4.0. (Creating a dedicated virtual envi
 IDE: Jupyter Notebook installed and running.
 
 API Access: A valid OpenAI API key.
-
-⚠️ Important Notice: This project uses OpenAI's embedding and language models. Please monitor your token consumption and associated charges closely.
-
-Installation
-Execute the following command to install the required dependencies:
-
-Bash
-pip install langchain==0.3.3 langchain-chroma==0.1.4 langchain-community==0.3.2 langchain-openai==0.2.2 pypdf==5.0.1 python-dotenv==1.0.1
-Note: Installing langchain==0.3.3 automatically installs langchain-core and langchain-text-splitters, which are required for the project.
-
-Package Compatibility: You can execute the project with different package versions, but be mindful of incompatibilities. LangChain updates frequently; if you encounter syntax differences, consult the LangChain API Reference.
-
-📂 Project Files
-Introduction_to_Tableau.pdf: Contains the complete transcript of the Introduction to Tableau course.
-
-LangChain_Project.ipynb: A Jupyter Notebook including the skeleton code to build your chatbot step by step.
